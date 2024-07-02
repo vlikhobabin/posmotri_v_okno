@@ -81,6 +81,9 @@ ol {
 }
 
 .visually-hidden {
+	/* Гит хаб ругается на использование  absolute
+	но комментировать не стал, т.к. не придумал как отказаться
+	от absolute в чекбоксах ((( */
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -172,9 +175,10 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
+	inset: 1px;
   position: absolute;
-  left: 1px;
-  top: 1px;
+  /* left: 1px;
+  top: 1px; */
   width: 15px;
   height: 15px;
   background-color: #fff;
