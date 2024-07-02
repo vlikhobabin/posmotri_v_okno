@@ -1,0 +1,35 @@
+{
+  "name": "posmotri_v_okno",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Привет!'",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint **/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix"
+  },
+  "author": "Яндекс",
+  "license": "ISC",
+  "description": "2-й учебный проект Яндекс практикум",
+  "dependencies": {
+    "prettier": "^3.3.2",
+    "stylelint": "^16.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlikhobabin/posmotri_v_okno.git"
+  },
+  "keywords": [
+    "учебный",
+    "проект",
+    "Яндекс",
+    "Практикум"
+  ],
+  "bugs": {
+    "url": "https://github.com/vlikhobabin/posmotri_v_okno/issues"
+  },
+  "homepage": "https://github.com/vlikhobabin/posmotri_v_okno#readme"
+}

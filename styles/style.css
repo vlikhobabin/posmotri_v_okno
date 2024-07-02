@@ -1,3 +1,8 @@
+:root {
+  --font-family: 'Fira Sans Condensed', sans-serif;
+  --second-family: 'Oswald', sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -16,6 +21,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+
+  display: flex;
+  justify-content: center;
 }
 
 h1,
@@ -35,4 +43,278 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  block-size: 534px;
+  gap: 30px;
+}
+
+.result {
+  margin-bottom: 9px; /* Пришлось добавить, чтобы кнопки были на одном уровне */
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content__details {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.result__video-container {
+  inline-size: 711px;
+  block-size: 386px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__fieldset {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin-bottom: 5px;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__textfield {
+  appearance: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  opacity: 0.7;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  padding: 2.5px;
+  inline-size: 225px;
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__label:has(.search-form__textfield:active) {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+	
+	/* почему-то outline не дает нужго результата, пришлось использовать border */
+	/* outline: 1px solid #fff; */
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  position: relative;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.search-form__label-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  height: 34px;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: end;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 2px;
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link:active {
+  background: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__list {
+  height: 298px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #000 transparent;
+  margin-top: 16px; /* тут размер подбирал по пикселю, в оригинале 26 */
+  position: relative;
+}
+
+.content__list-item {
+  margin-bottom: 19px; /* тут размер подбирал по пикселю, в оригинале 30 */
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.content__video-card-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 90%;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.content__video-card-description-container {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  object-fit: cover;
+	object-position: bottom;
+}
+
+.more-button {
+  width: 100%;
+  margin-bottom: 1px; /* Пришлось добавить, иначе нижний рамка пропадала */
 }
