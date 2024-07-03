@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: 'Oswald regular';
+  src:
+    url(Oswald-regular.woff2) format('woff2'),
+    url(Oswald-regular.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Fira Sans Condensed';
   src:
     url(FiraSansCondensed-Regular.woff2) format('woff2'),
