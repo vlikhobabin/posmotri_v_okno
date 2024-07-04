@@ -9,8 +9,9 @@
 
 .error__title {
   color: #fff;
-  font-family: 'Oswald regular', sans-serif;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
+	font-weight: 400;
 }

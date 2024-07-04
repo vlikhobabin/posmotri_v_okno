@@ -8,11 +8,11 @@
 }
 
 @font-face {
-  font-family: 'Oswald regular';
+  font-family: Oswald;
   src:
     url(Oswald-regular.woff2) format('woff2'),
     url(Oswald-regular.woff) format('woff');
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
 }
 
