@@ -79,13 +79,17 @@ a {
   color: var(--color-primery);
   user-select: none; /* подсмотрел у Бориса в продленке фишку */
   /* height: 34px; убрал, т.к. паддингом отрегулировал высоту*/
+	transition: background 0.3s ease-in-out; /* Прикольная фича, Борис рассказал */
+	
 
   &:active {
     background: var(--color-secondery);
   }
 
   &:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+		/* text-decoration-skip-ink: none; */
+		text-underline-offset: 3px; /* подсмотрел у Бориса*/
   }
 
   &:focus {
@@ -351,6 +355,10 @@ a {
   line-height: 100%;
   text-transform: uppercase;
   margin-bottom: 6px;
+	/* сокращаем длинное название города троекточием */
+	text-overflow: ellipsis; 
+	white-space: nowrap; 
+	overflow: hidden;
 }
 
 .content__video-card-description {
@@ -358,11 +366,18 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
+	/* сокращаем длинный текст описания города троекточием */
+	text-overflow: ellipsis; 
+	display: -webkit-box; 
+	-webkit-line-clamp: 4; /* line-clamp: 4; почему-то не поддерживается в моем хроме*/
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .content__video-card {
   display: grid;
   grid-template-columns: 200px 1fr;
+	/* grid-template-rows: 107px; */
 
   /* Сделал чез грид, т.к. получается меньше кода */
   /* display: flex; */
